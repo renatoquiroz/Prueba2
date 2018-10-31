@@ -1,7 +1,7 @@
-from django.db import models
+from django.db import models 
 from django.utils import timezone
 
-# Create your models here.
+# modelo formulario
 class FormularioAdopcion(models.Model):
     rut = models.CharField(max_length=12, help_text="Ej: 12.123.123-1" , unique=True)
     correo = models.CharField(max_length=100)
@@ -18,6 +18,11 @@ class FormularioAdopcion(models.Model):
 #guardar en git
 #git commit -a -m "nombre commit"
 #git push -u origin master
-
+    
+    #muestra rut en shell
     def __str__(self):
         return self.rut
+    #acorta la variable
+    def snippet(self):
+        return self.correo[:15] + '...'
+
