@@ -6,5 +6,19 @@
     </head>
     <Body>
         <h1>Formulario</h1>
+        <div class="FormAdop">
+            {% for FormularioAdopcion in FormAdopAll %}
+        <div class="FormularioAdopcion">
+            <H2><a href="#">{{FormAdopAll.rut}}</a></H2>
+            <p>{{FormularioAdopcion.correo}}</p>
+            <p>{{FormularioAdopcion.nombre}}</p>
+            <p>{{FormularioAdopcion.fechaNac}}</p>
+            <p>{{FormularioAdopcion.region}}</p>
+            <p>{{FormularioAdopcion.ciudad}}</p>
+            <p>{{FormularioAdopcion.tipoVivienda}}</p>
+
+        </div>
+            {% endfor  %}
+        </div>
     </Body>
 </html>
